@@ -4,11 +4,11 @@ import SideBar from "./Layout/SideBar";
 import Wrapper from "./Layout/Wrapper";
 import './App.css'
 
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Login from "./Components/Forms/Login";
 import Signup from "./Components/Forms/Signup";
 import Welcome from "./Components/Welcome";
-import { ContextProvider, UseAuth } from "./Context/AuthContext";
+import { ContextProvider } from "./Context/AuthContext";
 import Home from "./Components/Home";
 
 
