@@ -21,7 +21,7 @@ function Home() {
     }
   return (
     <div>
-        <h2 className='dem-h2'>You are logged in as: { user.email } </h2>
+        <h2 className='dem-h2'>You are logged in as: { user?.email } </h2>
         <button className='form-btn' onClick={ handleLogout}>Logout</button>
     </div>
   )
