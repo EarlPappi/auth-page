@@ -10,6 +10,7 @@ import Signup from "./Components/Forms/Signup";
 import Welcome from "./Components/Welcome";
 import { ContextProvider } from "./Context/AuthContext";
 import Home from "./Components/Home";
+import ResetPassword from "./Components/Forms/ResetPassword";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="/account" element={ <Home/>}/>
+            <Route path="/resetpassword" element={ <ResetPassword/>}/>
           </Routes>
         </FormCon>
       </Wrapper>

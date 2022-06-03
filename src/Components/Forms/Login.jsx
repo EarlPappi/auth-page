@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UseAuth } from '../../Context/AuthContext';
+import { db } from '../../firebase';
 
 const Login = () => {
     const { login } = UseAuth();
@@ -16,7 +17,8 @@ const Login = () => {
         e.preventDefault();
 
         try{
-            await login(email, password)
+            await login(email, password);
+            console.log(db);
             setError('');
             navigate('/account')
 
@@ -41,6 +43,7 @@ const Login = () => {
 
                            
                             <p className='form-p'>Don't have an account? <Link to='/signup'><span className='form-span'>Sign Up </span></Link></p>
+                            <p className='form-p'>Forgot password? <Link to='/resetpassword'><span className='form-span'>Reset Password</span></Link></p>
 
                             <button className='form-btn'>Login</button>
                         </form>
