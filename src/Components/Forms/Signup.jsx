@@ -41,6 +41,7 @@ const Signup = () => {
                 <div className="max-w-md w-full space-y-8">
 
                     <form action="" onSubmit={handleSignup}>
+                        
                         <label htmlFor="email" className='form-label'>Email:</label>
                         <input onChange={(e)=> setEmail(e.target.value)} type="email" className='form-input' />
 

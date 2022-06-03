@@ -38,7 +38,11 @@ export const ContextProvider = ({ children }) => {
             unsubscribe();
         });
 
-    }, [])
+    }, []);
+
+    const updateRegister = () =>{
+        return updateProfile(auth.currentUser);
+    }
 
 
     const logout = () =>{
@@ -54,7 +58,8 @@ export const ContextProvider = ({ children }) => {
             setIsLoggedIn,
             logout,
             user,
-            resetPasswword
+            resetPasswword,
+            updateRegister
         }}>
             {children}
         </UserContext.Provider>
